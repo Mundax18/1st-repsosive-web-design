@@ -1,0 +1,218 @@
+#main-header{
+     /*Nav bar of the bar we also use this to make our nav bar
+    mainly at this phase*/
+
+    height: 5rem ;  /*To make it more dynamic incase the user wants to change the font size in the browser*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(29, 24, 26);
+
+    /*1st digit is for top & bottom and the 
+    2nd digit is for left and right*/
+
+    padding: 0px 5%;  /*To make it more dynamic icase the user wants to change the font size in the browser*/
+
+}
+
+#logo {
+    /* Munda's Food Logo on top*/
+
+    font-size: 1.5rem; /* To make it more dynamic incase the user wants to change the font size in the browser*/
+    font-weight: bold;
+    color: rgb(255, 217, 0);
+    text-transform: uppercase;
+}
+
+.nav-button {
+/* Container for span elements in html, used to created the hamburger icon*/
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none; /* To hide the hamburger icon when the website is on desktop view*/
+
+}
+
+.nav-button span{
+    /* Edits for the hamburger icon*/
+    width: 100%;
+    height:3px ;
+    background-color: rgb(35, 214, 47);
+}
+
+
+#main-header ul {
+    /* Postioning My meals & Browse on nav bar*/
+
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    padding: 0 px;
+}
+
+#main-header li {  
+ /* Spacing on the nav bar*/
+font-size: 1rem; /* To make it more dynamic icase the user wants to change the font size in the browser*/
+margin: 0px 15px;
+}
+
+#main-header nav a {
+ /* Edit text for nav bar Browse & Meals on nav bar*/
+
+ font-size: 1.25rem; /* To make it more dynamic incase the user wants to change the font size in the browser*/
+ color: rgb(255, 217, 0);
+
+}
+
+#main-header nav a:hover {
+
+    color: rgb(228, 163, 44);
+}
+
+#side-drawer {
+    /* Container for side drawer for the hamburger icon using aside html elment*/
+    height: 100%;
+    width: 100%;
+    background-color: rgb(29, 26, 27);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;/* To allow our id url to displayed when the hambuer icon is clicked*/
+}
+
+#side-drawer:target {
+    /*/*Checks if our specific url (the id) is added in the browser)*/
+    display: block;
+}
+
+#side-drawer header {
+    /*Same attributes as the main header, Look above*/
+
+    height: 5rem ;
+    display: flex;
+    justify-content: flex-end; /* To move the hamburger icon to the top right*/ 
+    align-items: center;
+    background-color: rgb(29, 24, 26);
+    padding: 0px 5%;
+
+}
+
+
+#side-drawer ul {
+/*Postioning of the side drawer contents*/
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 4rem 1rem;
+}
+#side-drawer li {
+    margin: 1rem 0;
+}
+
+#side-drawer a {
+    /* Text colour for the side drawer*/
+    color: rgb(238, 239, 213);
+    font-size: 2rem;
+}
+
+main h1  {
+    text-align: center ;
+    color: rgb(238, 164, 44);
+    font-size: 3rem;
+}
+
+#latest-menue {
+    /* Postion Centre for section content*/
+
+    width: 80%;
+    margin: 2.5rem auto;
+}
+
+#latest-menue ul {
+/*Postion of the food menue into coloums*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    list-style: none;
+}
+.food-item {
+    background-color: rgb(228, 206, 182);
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+
+.food-content {
+    /* H2 and Add cart text postontion for both items*/
+    
+    padding: 1rem;
+    text-align: center;
+    font-size: 200%;
+}
+.food-item h2 {
+    margin: 0rem orem 1 rem o;
+
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.food-item img {
+    /* Container for the image*/
+
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.button {
+/* Button for Add Cart*/
+    color: white;
+    border-radius: 4px;
+    background-color: rgb(147, 97, 194);
+    padding: 0.5rem 1.5rem;
+
+}
+.button a:hover {
+    color: rgb(117, 11, 64);
+}
+
+
+body {
+    font-family:'Poppins', 'Arial Narrow' ;
+    margin: 0px;
+    background-color: rgb(116, 113, 110);
+ }
+
+ a {
+    text-decoration: none;
+ }
+
+ @media (max-width: 48rem) {
+    /* When screen hits 768px the following attributes will scale down (from Desktop view to mobile view)*/
+   
+        #main-header nav {
+         display: none; /* The Orders and Browse Food is hidden, Its placed in the Hamburger icon*/
+
+        }   
+
+        .nav-button {
+            display: flex; /*It shows the side drawer content, in nav-button it's display none to hide in desktop view*/        }
+
+        #main h1 {
+            font-size: 1.5rem;
+        
+            }
+
+    #latest-menue ul { 
+        grid-template-columns: 100%;
+    }     
+
+
+ }
